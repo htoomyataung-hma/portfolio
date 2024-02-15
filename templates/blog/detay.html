@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container">
+        <h1 class="text-center pt-5 mb-5">{{ detay.title }}</h1>
+        <img src="{{ detay.image.url }}" class="img-fluid" alt="Responsive image">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative pb-5">
+            <div class="col p-4 d-flex flex-column position-static">
+                <h3 class="mb-0"></h3>
+                <div class="mb-1 text-muted">{{ detay.pub_date | date:'Y-m-d H:s' }}</div>
+                <p class="card-text mb-auto">{{ detay.body }}  </p>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
+</body>
+</html>
